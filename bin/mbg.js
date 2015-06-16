@@ -10,13 +10,21 @@ var exportAllTwbPackages = require("../lib/exportAllTwbPackages");
 
 function getCliOptions(args) {
 	var arg;
-	var opts = { packages: [] };
+	var opts = {
+		meteorUser: "",
+		pkgPrefix: "bootstrap-",
+		packages: []
+	};
 
 	while (args.length) {
 		arg = args.shift();
-		// TODO: Add support for "--dest-pkg-prefix="
+
 		if (arg.indexOf("--package=") === 0) {
 			opts.packages.push.apply(opts.packages, arg.split("=").pop().replace(/'|"/g, "").split(','));
+		} else if (arg.indexOf("--pkg-prefix=") === 0) {
+			opts.pkgPrefix = arg.split("=").pop().replace(/'|"/g, "");
+		} else if (arg.indexOf("--meteor-user=") === 0) {
+			opts.meteorUser = arg.split("=").pop().replace(/'|"/g, "");
 		} else {
 			opts.destination = arg.replace(/'|"/g, "");
 		}
@@ -35,7 +43,7 @@ if (!opts.destination) {
 
 if (opts.packages.length) {
 	async.each(opts.packages, function (twbPkgName, done) {
-		exportTwbPackage(twbPkgName, "bootstrap-", opts.destination, done);
+		exportTwbPackage(twbPkgName, opts.meteorUser, opts.pkgPrefix, opts.destination, done);
 	}, function (err) {
 		if (err) {
 			console.log(err);
@@ -44,7 +52,7 @@ if (opts.packages.length) {
 		}
 	});
 } else {
-	exportAllTwbPackages("bootstrap-", opts.destination, function (err) {
+	exportAllTwbPackages(opts.meteorUser, opts.pkgPrefix, opts.destination, function (err) {
 		if (err) {
 			console.log(err);
 		} else {

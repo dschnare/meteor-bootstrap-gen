@@ -1,4 +1,26 @@
 {
+	"full": {
+		"files": [
+			"less/bootstrap.less"
+		],
+		"copy": [
+			"less/**/*.less",
+			"js/**/*.js",
+			"../../templates/meteor/package.mustache.js"
+		]
+	},
+	"theme": {
+		"files": [
+			"less/theme.less"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps":[
+			"base"
+		]
+	},
+
 	"variables": {
 		"files": [
 			"less/variables.less"
