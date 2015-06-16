@@ -77,3 +77,52 @@ The `package.js` file will look like this:
 
 Although great care was taken to mitigate duplicate CSS there may be circumstances where small pieces
 of CSS get duplicated, such as the `.clearfix` utility class.
+
+
+# The Twitter Bootstrap Packages
+
+Here is a list of all the Twitter Bootstrap packages supported by this generator.
+
+- full
+- theme
+- variables
+- mixins
+- base
+- affix
+- alerts
+- badges
+- breadcrumbs
+- button-groups
+- buttons
+- carousel
+- close
+- code
+- collapse
+- component-animations
+- dropdowns
+- forms
+- glyphicons
+- grid
+- input-groups
+- jumbotron
+- labels
+- list-group
+- media
+- modals
+- navs
+- navbar
+- pager
+- pagination
+- panels
+- popovers
+- print
+- progress-bars
+- responsive-embed
+- scrollspy
+- tab
+- tables
+- thumbnails
+- tooltip
+- transition
+- type
+- wells
