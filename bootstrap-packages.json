@@ -14,6 +14,9 @@
 			"less/theme.less"
 		],
 		"copy": [
+			"less/variables.less",
+			"less/mixins.less",
+			"less/mixins/*.less",
 			"../../templates/meteor/package.mustache.js"
 		],
 		"deps":[

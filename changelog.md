@@ -1,3 +1,10 @@
+# 1.0.3
+
+**June 15, 2015**
+
+- Add glob to copy over variables.less and mixins for the theme Twitter Bootstrap package.
+
+
 # 1.0.2
 
 **June 15, 2015**
