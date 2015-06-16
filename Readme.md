@@ -32,7 +32,11 @@ Then run your app...
 
 # Usage
 
-	mbg [--package=PACKAGES] [--pkg-prefix=METEOR_PKG_PREFIX] [--meteor-user=METEOR_USERNAME] {destination directory}
+	mbg
+		[--package=PACKAGES]
+		[--pkg-prefix=METEOR_PKG_PREFIX]
+		[--meteor-user=METEOR_USERNAME]
+		{destination directory}
 
 The CLI accepts an optional comma separated list of Twitter Bootstrap pacakge names.
 If any package names are specified then only those packages will be exported as Metero packages.
