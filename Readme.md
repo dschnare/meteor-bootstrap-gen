@@ -55,7 +55,7 @@ Example:
 The `--pkg-prefix` option, if not specified, defaults to `bootstrap-`.
 The `--meteor-user` is optional, but if specifified then the resulting `package.js` will contain the Meteor username as part of the package name.
 
-**NOTE: If useing mbg to maintain existing Meteor Twitter Bootstrap packages then the same `--meteor-user` and `--pkg-prefix` options must be used when regenerating the Meteor pacakges, otherwise the Meteor package depedendencies can't be resolved.**
+**NOTE: If using mbg to maintain existing Meteor Twitter Bootstrap packages then the same `--meteor-user` and `--pkg-prefix` options must be used when regenerating the Meteor pacakges, otherwise the Meteor package depedendencies can't be resolved.**
 
 Example:
 
