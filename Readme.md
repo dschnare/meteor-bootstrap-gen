@@ -3,6 +3,11 @@
 A Twitter Bootstrap to Meteor package generator. The generator will export
 modular packages from Twitter Bootstrap and save them as Meteor packages.
 
+The main use cases of this generator are:
+
+1. A very fast and easy way to generate a modular, Meteor-centric Twitter Bootstrap packages for your app
+2. A stable means of mainting Meteor-centric Twitter Bootstrap packages on Atmosphere.
+
 
 # Installation
 
@@ -39,7 +44,7 @@ Then run your app...
 		{destination directory}
 
 The CLI accepts an optional comma separated list of Twitter Bootstrap pacakge names.
-If any package names are specified then only those packages will be exported as Metero packages.
+If any package names are specified then only those packages will be exported as Meteor packages.
 Otherwise all Twitter Bootstrap packages will be exported as Meteor packages.
 
 Example:
@@ -49,6 +54,8 @@ Example:
 
 The `--pkg-prefix` option, if not specified, defaults to `bootstrap-`.
 The `--meteor-user` is optional, but if specifified then the resulting `package.js` will contain the Meteor username as part of the package name.
+
+**NOTE: If useing mbg to maintain existing Meteor Twitter Bootstrap packages then the same `--meteor-user` and `--pkg-prefix` options must be used when regenerating the Meteor pacakges, otherwise the Meteor package depedendencies can't be resolved.**
 
 Example:
 
