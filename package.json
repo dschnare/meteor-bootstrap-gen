@@ -1,0 +1,21 @@
+{
+  "name": "meteor-bootstrap-gen",
+  "version": "1.0.0",
+  "description": "A Twitter Bootstrap to Meteor package generator.",
+  "main": "index.js",
+  "bin": {
+    "mbg": "bin/mbg.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Darren Schnare <schnare.d@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.2.1",
+    "bootstrap": "^3.3.4",
+    "glob": "^5.0.10",
+    "mkdirp": "^0.5.1",
+    "mustache": "^2.1.1"
+  }
+}

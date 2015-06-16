@@ -1,0 +1,606 @@
+{
+	"variables": {
+		"files": [
+			"less/variables.less"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		]
+	},
+	"mixins": {
+		"files": [
+			"less/mixins.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';"
+		],
+		"copy": [
+			"less/mixins/*.less",
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"variables"
+		]
+	},
+	"base": {
+		"files": [
+			"less/normalize.less",
+			"less/scaffolding.less",
+			"less/utilities.less",
+			"less/responsive-utilities.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"variables",
+			"mixins"
+		]
+	},
+
+
+
+	"affix": {
+		"files": [
+			"js/affix.js"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"alerts": {
+		"files": [
+			"less/alerts.less",
+			"js/alert.js"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base",
+			"transition"
+		]
+	},
+	"badges": {
+		"files": [
+			"less/badges.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"breadcrumbs": {
+		"files": [
+			"less/breadcrumbs.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"button-groups": {
+		"files": [
+			"less/button-groups.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base",
+			"buttons"
+		]
+	},
+	"buttons": {
+		"files": [
+			"less/buttons.less",
+			"js/button.js"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"carousel": {
+		"files": [
+			"less/carousel.less",
+			"js/carousel.js"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base",
+			"transition"
+		]
+	},
+	"close": {
+		"files": [
+			"less/close.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"code": {
+		"files": [
+			"less/code.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"collapse": {
+		"files": [
+			"js/collapse.js"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base",
+			"transition"
+		]
+	},
+	"component-animations": {
+		"files": [
+			"less/component-animations.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"dropdowns": {
+		"files": [
+			"less/dropdowns.less",
+			"js/dropdown.js"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"forms": {
+		"files": [
+			"less/forms.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"glyphicons": {
+		"files": [
+			"less/glyphicons.less"
+		],
+		"copy": [
+			"fonts/*.*",
+			"../../templates/meteor/package.mustache.js"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';",
+			"@icon-font-path: '/{{dest}}/{{destPkgPrefix}}glyphicons/fonts/';"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"grid": {
+		"files": [
+			"less/grid.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"input-groups": {
+		"files": [
+			"less/input-groups.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';",
+			"@import (reference) '/{{dest}}/{{destPkgPrefix}}forms/less/forms.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base",
+			"forms"
+		]
+	},
+	"jumbotron": {
+		"files": [
+			"less/jumbotron.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"labels": {
+		"files": [
+			"less/labels.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"list-group": {
+		"files": [
+			"less/list-group.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"media": {
+		"files": [
+			"less/media.less"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"modals": {
+		"files": [
+			"less/modals.less",
+			"js/modal.js"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base",
+			"transition"
+		]
+	},
+	"navs": {
+		"files": [
+			"less/navs.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';",
+			"@import (reference) '/{{dest}}/{{destPkgPrefix}}base/less/utilities.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"navbar": {
+		"files": [
+			"less/navbar.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';",
+			"@import (reference) '/{{dest}}/{{destPkgPrefix}}base/less/utilities.less';",
+			"@import (reference) '/{{dest}}/{{destPkgPrefix}}forms/less/forms.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base",
+			"forms",
+			"navs"
+		]
+	},
+	"pager": {
+		"files": [
+			"less/pager.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"pagination": {
+		"files": [
+			"less/pagination.less"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"panels": {
+		"files": [
+			"less/panels.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"popovers": {
+		"files": [
+			"less/popovers.less",
+			"js/popover.js"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base",
+			"tooltip"
+		]
+	},
+	"print": {
+		"files": [
+			"less/print.less"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"progress-bars": {
+		"files": [
+			"less/progress-bars.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"responsive-embed": {
+		"files": [
+			"less/responsive-embed.less"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"scrollspy": {
+		"files": [
+			"js/scrollspy.js"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"tab": {
+		"files": [
+			"js/tab.js"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base",
+			"navs",
+			"transition"
+		]
+	},
+	"tables": {
+		"files": [
+			"less/tables.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"thumbnails": {
+		"files": [
+			"less/thumbnails.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"tooltip": {
+		"files": [
+			"less/tooltip.less",
+			"js/tooltip.js"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base",
+			"transition"
+		]
+	},
+	"transition": {
+		"files": [
+			"js/transition.js"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"type": {
+		"files": [
+			"less/type.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	},
+	"wells": {
+		"files": [
+			"less/wells.less"
+		],
+		"imports": [
+			"@import '/{{dest}}/{{destPkgPrefix}}variables/less/variables.less';",
+			"@import '/{{dest}}/{{destPkgPrefix}}mixins/less/mixins.less';"
+		],
+		"copy": [
+			"../../templates/meteor/package.mustache.js"
+		],
+		"deps": [
+			"base"
+		]
+	}
+}
