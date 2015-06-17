@@ -99,13 +99,13 @@ The format of the JSON data file is expected to be of the following format:
 	{
 		"bootstrap-package-name": {
 			"files": [
-				"list of files to copy to Meteor package and add to api.use() (relative to the bootstrap driectory)"
+				"list of files to copy to Meteor package and add to api.use()"
 			],
 			"imports": {
-				"bootstrap-package-name": "@none" | null | "@all" | ["list of Less files to import from package"]
+				"any valid Less statements, typically @imports"
 			},
 			"copy": [
-				"globs of files to copy to Meteor package (relative to bootstrap directory)"
+				"globs of files to copy to Meteor package"
 			],
 			"deps": [
 				"list of bootstrap package names that this package depends on"
