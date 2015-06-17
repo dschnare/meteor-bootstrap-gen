@@ -4,6 +4,8 @@
 
 
 var async = require("async");
+var path = require("path");
+var loadTwbPackages = require("../lib/loadTwbPackages");
 var exportTwbPackage = require("../lib/exportTwbPackage");
 var exportAllTwbPackages = require("../lib/exportAllTwbPackages");
 
@@ -12,6 +14,7 @@ function getCliOptions(args) {
 	var arg;
 	var opts = {
 		meteorUser: "",
+		twbPackagesPath: path.join(__dirname, "..", "bootstrap-packages.json"),
 		pkgPrefix: "bootstrap-",
 		packages: []
 	};
@@ -25,6 +28,8 @@ function getCliOptions(args) {
 			opts.pkgPrefix = arg.split("=").pop().replace(/'|"/g, "");
 		} else if (arg.indexOf("--meteor-user=") === 0) {
 			opts.meteorUser = arg.split("=").pop().replace(/'|"/g, "");
+		} else if (arg.indexOf("--twb-packages=") === 0) {
+			opts.twbPackagesPath = arg.split("=").pop().replace(/'|"/g, "");
 		} else {
 			opts.destination = arg.replace(/'|"/g, "");
 		}
@@ -37,26 +42,32 @@ var args = process.argv.slice(2);
 var opts = getCliOptions(args);
 
 if (!opts.destination) {
-	console.log("Expected destination directory.");
+	console.error("Expected destination directory.");
 	process.exit(1);
 }
 
-if (opts.packages.length) {
-	async.each(opts.packages, function (twbPkgName, done) {
-		exportTwbPackage(twbPkgName, opts.meteorUser, opts.pkgPrefix, opts.destination, done);
-	}, function (err) {
-		if (err) {
-			console.log(err);
+loadTwbPackages(opts.twbPackagesPath, function (err, twbPackages) {
+	if (err) {
+		console.error(err);
+	} else {
+		if (opts.packages.length) {
+			async.each(opts.packages, function (twbPkgName, done) {
+				exportTwbPackage(twbPackages[twbPkgName], opts.meteorUser, opts.pkgPrefix, opts.destination, done);
+			}, function (err) {
+				if (err) {
+					console.error(err);
+				} else {
+					console.log("Done");
+				}
+			});
 		} else {
-			console.log("Done");
+			exportAllTwbPackages(twbPackages, opts.meteorUser, opts.pkgPrefix, opts.destination, function (err) {
+				if (err) {
+					console.error(err);
+				} else {
+					console.log("Done");
+				}
+			});
 		}
-	});
-} else {
-	exportAllTwbPackages(opts.meteorUser, opts.pkgPrefix, opts.destination, function (err) {
-		if (err) {
-			console.log(err);
-		} else {
-			console.log("Done");
-		}
-	});
-}
+	}
+});

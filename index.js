@@ -1,11 +1,11 @@
 /*
 	The main module that exposes the following API:
 
-	exportAllTwbPackages(dest, callback)
-	exportAllTwbPackages(meteorUser, destPkgPrefix, dest, callback)
+	exportAllTwbPackages(twbPackages, dest, callback)
+	exportAllTwbPackages(twbPackages, meteorUser, destPkgPrefix, dest, callback)
 
-	exportTwbPackage(twbPkgName, dest, callback)
-	exportTwbPackage(twbPkgName, meteorUser, destPkgPrefix, dest, callback)
+	exportTwbPackage(twbPkg, dest, callback)
+	exportTwbPackage(twbPkg, meteorUser, destPkgPrefix, dest, callback)
 */
 
 "use strict";
